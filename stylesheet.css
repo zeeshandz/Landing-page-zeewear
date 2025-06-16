@@ -70,7 +70,7 @@ header nav .contact-btn:hover {
 
 .banner {
   height: 100vh;
-  background: url('./img/banner\ img.png') no-repeat center top/cover;
+  background: url('banner\ img.png') no-repeat center top/cover;
   display: flex;
   align-items: center;
   justify-content: center;
