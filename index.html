@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZeeWear</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <div class="logo">ZeeWear</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav id="navbar">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+      <button class="contact-btn">Contact Us</button>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Stylish T-Shirts</h1>
+      <p>Trendy • Comfortable • Affordable</p>
+      <button>Explore Now</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="./img/img-1.jpg" alt="T-Shirt 1">
+      <h3>Classic Tee</h3>
+      <p>₹699</p>
+    </div>
+    <div class="card">
+      <img src="./img/img-3.jpg" alt="T-Shirt 2">
+      <h3>Summer Combo Tee</h3>
+      <p>₹749</p>
+    </div>
+    <div class="card">
+      <img src="./img/img-2.jpg" alt="T-Shirt 3">
+      <h3>Printed Green Tee</h3>
+      <p>₹799</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ZeeWear | Designed by Mohd Zeeshan
+  </footer>
+
+<script>
+  function toggleMenu() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>

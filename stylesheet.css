@@ -1,0 +1,213 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #00ffd0;
+}
+
+header nav .contact-btn {
+  margin-left: 20px;
+  background-color: #00ffd0;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+header nav .contact-btn:hover {
+  background-color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.banner {
+  height: 100vh;
+  background: url('./img/banner\ img.png') no-repeat center top/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  padding: 12px 30px;
+  background: #00ffd0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.banner-content button:hover{
+    background-color: white;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 3rem 2rem;
+  background: #fff;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Quarie */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: -50px;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  #navbar.active {
+    display: block;
+    width: 104%;
+  }
+
+  #navbar a,
+  #navbar .contact-btn {
+        width: 50%;
+        margin: 20px 0px;
+        display: block;
+    }
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
